@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+@font-face {
+    font-family: Hanged Letters;
+    src: url(./assets/fonts/hanging_letters/Hanged\ Letters.ttf);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: #20002c;
+    background: -webkit-linear-gradient(to top, #cbb4d4, #20002c);
+    background: linear-gradient(to top, #cbb4d4, #20002c);
+    overflow-y: hidden;
+}
+
+h1{
+    font-family: Hanged Letters;
+    text-align: center;
+    font-size: 5rem;
+    color: #cbb4d4;
+    letter-spacing: 0.5rem;
+    margin-top: auto;
+}
+
+audio{
+    width: 180px;
+    height: 40px;
+    transition: all 0.5s linear;
+}
+
+audio:hover, audio:focus, audio:active{
+    transform: scale(1.05);
+}
+
+audio::-webkit-media-controls-panel{
+    background-color: #cbb4d4;
+    transition: all 0.5 linear;
+}
+
+audio::-webkit-media-controls-panel:hover{
+    background-color: #CE97B0;
+}
+
+audio::-webkit-media-controls-play-button{
+    margin-left: 10px;
+}
+
+audio::-webkit-media-controls-current-time-display{
+    display: none;
+}
+
+audio::-webkit-media-controls-mute-button{
+    display: none;
+}
+
+audio::-webkit-media-controls-volume-slider{
+    display: none;
+}
+
+audio::-webkit-media-controls-volume-slider-container{
+    display: none;
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+    display: none;
+}
+
+audio::-webkit-media-controls-timeline{
+    width: 80px;
+    margin-right: 10px;
+}
+
+audio::-webkit-media-controls-toggle-closed-captions-button{
+    display: none;
+}
+
+.songs{
+    margin-top: -4rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 2rem;
+    grid-column-gap: 1rem;
+    padding: 3rem;
+}
+
+.song{
+    width: 200px;
+    height: 290px;
+    border-radius: 1rem;
+    background: #20002c;
+    background: -webkit-linear-gradient(to bottom, #cbb4d4, #20002c);
+    background: linear-gradient(to bottom, #cbb4d4, #20002c);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Dancing Script, 'cursive';
+    padding: 10px;
+    transition: all 0.5s linear;
+}
+
+.song:hover{
+    transform: scale(0.95);
+}
+
+.song img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 769px) {
+    body{
+        overflow-x: hidden;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .songs{
+        width: 600px;
+        grid-template-columns: repeat(2, 1fr);
+        left: 50%;
+        position: absolute;
+        margin-left: -300px;
+        padding: 2rem;
+        margin-top: -2%;
+        grid-row-gap: 1rem;
+        grid-column-gap: 3rem;
+    }
+    .song{
+        width: 250px;
+        height: 100px;
+    }
+    .song img{
+        width: 100px;
+        height: 100px;
+        top: 50%;
+        margin-top: -50px;
+        position: relative;
+        left: -50%;
+    }
+    h3{
+        left: 50%;
+        margin-left: -75%;
+        top: 50%;
+        margin-top: -75px;
+        position: relative;
+    }
+    audio{
+        top: 50%;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    body{
+        height: 130vh;
+        overflow-y: auto;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .songs{
+        width: 500px;
+        grid-template-columns: 1fr;
+        left: 50%;
+        position: absolute;
+        margin-left: -250px;
+        padding: 2rem;
+        grid-row-gap: 1.5rem;
+    }
+    .song{
+        width: 400px;
+        height: 50px;
+        border-radius: 3rem;
+    }
+    .song img{
+        width: 80px;
+        height: 80px;
+        top: 50%;
+        margin-top: -50px;
+        position: relative;
+        left: -50%;
+    }
+    h3{
+        top: 100%;
+        left: 40%;
+    }
+    audio{
+        width: 90px;
+        top: 50%;
+        margin-top: -22.5px;
+        left: 40%;
+        position: relative;
+    }
+    audio::-webkit-media-controls-panel{
+        width: 10px;
+    }
+    audio::-webkit-media-controls-timeline{
+        display: none;
+    }
+    audio::-webkit-media-controls-play-button{
+        margin-right: 30px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+}
